@@ -1,0 +1,645 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;        
+    box-sizing: border-box;
+}
+
+body{   
+    background-color: rgb(14, 15, 17);
+}
+
+header {
+    position: absolute;
+    width: 100%;
+     background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.5),
+        transparent
+    );
+}
+
+header img {
+    width: 45px;
+    margin-top: 15px;
+    margin-left: 10px;
+    transition: 0.3s;
+}
+
+header img:hover{
+    transform: scale(4px);
+}
+.btnwpp {
+    position: fixed;
+    right: 25px;
+    top: 25px;
+    z-index: 999;
+    width: 43px;
+    height: 43px;
+    background-color: #25D366;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.btnwpp a.btn-whats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 90%;
+    text-decoration: none;
+}
+
+.btnwpp img {
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin: 0;     
+    padding: 0;     
+}
+
+.btnwpp:hover {
+    transform: scale(1.1);
+}
+
+header nav {
+    position: relative;
+    display: flex;             
+    gap: 38px;                 
+    top: -30px;
+    justify-content: center;
+    text-align: center;
+}
+
+header nav li {
+    list-style: none;
+}
+
+header nav a {
+    display: inline-block;     /* Obrigatorio para o transform funcionar */
+    text-decoration: none;
+    color: rgb(255, 252, 243);
+    transition: 0.3s; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;          
+    font-weight: bold;
+}
+
+header nav a:hover {
+    transform: translateX(3px);
+    color: gold;
+}
+
+.hero-section{
+    min-height: 100vh; /* serve p definir o tamanho minimo */
+    background-image: url(../Assets/Images/background.png);
+    background-size: cover; /* serve para cobrir todo espaco sem deixar vazios*/
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.hero-content{
+    position: relative;
+    color: white;
+    display: inline-block;
+    top: 200px;    
+}
+
+
+.hero-content span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 45px;
+  margin-left: 65px;
+}
+
+.hero-content h1{
+    margin-left: 69.5px;
+    font-size: 45px;
+    background: linear-gradient(135deg, rgb(253, 10, 152) 0%, rgb(241, 189, 1) 100%);
+    -webkit-background-clip: text; /*recorta o texto e adapta a cor*/
+    background-clip: text;
+    color: transparent; /* aqui ele colocou no texto*/
+
+
+}
+
+.hero-content p{
+    font-size: 17px;
+    font-style: italic;
+    font-weight: 100;
+    margin-left: 60px;
+
+}
+
+
+.line{
+    border: none;
+    height: 1px;
+    width: 100px;
+    background: linear-gradient(135deg, rgb(253, 10, 152) 0%, rgb(241, 189, 1) 100%);
+    margin: 20px 0px 20px 70px;
+}
+
+.hero-content button {
+    position: relative;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(20, 15, 12, 0.6); 
+    border: 1px solid #c27856; 
+    border-radius: 50px;
+    padding: 12px 24px; 
+    width: auto; 
+    min-width: 200px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(194, 120, 86, 0.2); /* Efeito suave de luz */
+    transition: all 0.3s ease;
+    margin: 20px 0px 0px 50px;
+}
+
+.hero-content button:hover {
+    background-color: rgba(194, 120, 86, 0.25);
+    border-color: #df9471;
+    box-shadow: 0 0 15px rgba(194, 120, 86, 0.4);
+}
+
+
+.servicos {
+    background-color: #0D0C0A;
+    padding: 120px 6%;
+    color: #F5F1EC;
+}
+
+.servicos {
+    width: 100%;
+    padding: 120px 7%;
+    box-sizing: border-box;
+
+    background-color: #0D0C0A;
+    color: #F4F0EC;
+}
+
+
+
+.servicos-topo {
+    max-width: 1300px;
+    margin: 0 auto 70px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    gap: 60px;
+}
+
+.servicos-label {
+    display: block;
+
+    margin-bottom: 20px;
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+
+    letter-spacing: 4px;
+
+    color: #E88970;
+}
+
+.servicos-topo h2 {
+    margin: 0;
+
+    font-family: Georgia, serif;
+    font-size: 58px;
+    font-weight: 400;
+    line-height: 1.05;
+}
+
+.servicos-topo h2 strong {
+    color: #E85D72;
+    font-weight: 400;
+}
+
+.servicos-topo p {
+    max-width: 360px;
+
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+
+    color: #A9A39E;
+}
+
+
+
+.servicos-lista {
+    max-width: 1300px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+
+
+.card-servico {
+    min-height: 320px;
+
+    display: grid;
+    grid-template-columns: 42% 58%;
+
+    overflow: hidden;
+
+    background-color: #12110F;
+
+    border: 1px solid #292623;
+
+    border-radius: 4px;
+
+    box-sizing: border-box;
+
+    transition: 0.3s ease;
+}
+
+.card-servico:hover {
+    border-color: #6F4038;
+    transform: translateY(-4px);
+}
+
+
+
+.card-imagem {
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+}
+
+.card-imagem img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+.card-servico:hover .card-imagem img {
+    transform: scale(1.04);
+}
+
+
+/* CONTEÚDO */
+
+.card-conteudo {
+    padding: 35px;
+
+    display: flex;
+    flex-direction: column;
+
+    box-sizing: border-box;
+}
+
+.card-conteudo > span {
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+    letter-spacing: 3px;
+
+    color: #E88970;
+}
+
+.card-conteudo h3 {
+    margin: 18px 0 15px;
+
+    font-family: Georgia, serif;
+
+    font-size: 30px;
+    font-weight: 400;
+
+    color: #F4F0EC;
+}
+
+.card-conteudo p {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    color: #A9A39E;
+}
+
+.card-conteudo a {
+    margin-top: auto;
+    padding-top: 30px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    color: #E88970;
+
+    text-decoration: none;
+}
+
+.card-conteudo a b {
+    margin-left: 8px;
+
+    font-size: 17px;
+
+    font-weight: 400;
+}
+
+.card-conteudo a:hover {
+    color: #F4B06A;
+}
+
+/*Especialistas*/
+
+.Especialistas {
+    background-color: rgb(22, 22, 21);
+    color: white;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.especialista-hero span {
+    display: block;
+    text-align: center;
+    margin: 40px 0;
+    font-family: Georgia, serif;
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 1.05;
+}
+
+.servicos-especial {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas de largura igual */
+    gap: 25px;
+}
+
+.card-kah {
+    min-height: 320px;
+    display: grid;
+    grid-template-columns: 42% 58%;
+    overflow: hidden;
+    background-color: #12110F;
+    border: 1px solid #292623;
+    border-radius: 10px;
+    box-sizing: border-box;
+    transition: 0.3s ease;
+    height: 50vh;
+}
+
+.card-kah:hover {
+    border-color: #6F4038;
+    transform: translateY(-4px);
+}
+
+.card-imagem {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.card-imagem img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card-kah:hover .card-imagem img {
+    transform: scale(1.04);
+}
+
+.card-especialistas {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.card-especialistas span{
+        color: #e653a3;
+        font-size: 30px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.card-especialistas h3{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+        
+}
+
+.card-especialistas p{
+    font-size: 20px;
+    margin-top: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.card-especialistas a {
+    margin-top: auto;
+    padding-top: 30px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #E88970;
+    text-decoration: none;
+}
+
+.card-especialistas a:hover {
+    color: #F4B06A;
+}
+
+/* (Ronaldo) */
+.card-ronald {
+    min-height: 320px;
+    display: grid;
+    grid-template-columns: 42% 58%;
+    overflow: hidden;
+    background-color: #12110F;
+    border: 1px solid #292623;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: 0.3s ease;
+}
+
+.card-ronald:hover {
+    border-color: #6F4038;
+    transform: translateY(-4px);
+}
+
+.card-imagem2 {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.card-imagem2 img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card-ronald:hover .card-imagem2 img {
+    transform: scale(1.04);
+}
+
+.card-especialistas2 {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-especialistas2 span{
+       color: #5369e6;
+        font-size: 30px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.card-especialistas2 h3{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+
+}
+
+.card-especialistas2 p{
+    font-size: 20px;
+    margin-top: 10px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+
+.card-especialistas2 a {
+    margin-top: auto;
+    padding-top: 30px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #E88970;
+    text-decoration: none;
+}
+
+.card-especialistas2 a:hover {
+    color: #F4B06A;
+}
+
+
+
+
+
+
+@media (max-width: 900px) {
+
+    .servicos-topo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .servicos-lista {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .servicos {
+        padding: 80px 5%;
+    }
+
+    .servicos-topo h2 {
+        font-size: 42px;
+    }
+
+    .card-servico {
+        grid-template-columns: 1fr;
+    }
+
+    .card-imagem {
+        height: 280px;
+    }
+
+    .card-conteudo {
+        min-height: 280px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    background-color: rgb(0, 0, 0);
+    height: 70vh;
+    color: white;
+}
+
+footer p{
+    position: relative;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    top:190px;
+    margin-left: 5px;
+}
+
+
+iframe{
+    position: relative;
+    border-radius: 5px;
+    left: 740px;
+}
+
+footer a {
+    position: relative;
+    top: -290px;
+}
